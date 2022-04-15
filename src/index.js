@@ -153,7 +153,7 @@ function Board(props) {
         <div className='front'>
           <img
             className={'img-fluid w-100'}
-            src={'/images/tex.jpg'}
+            src={process.env.PUBLIC_URL + '/images/tex.jpg'}
             alt='Card'
             draggable='false'
           />
@@ -161,7 +161,7 @@ function Board(props) {
         <div className='back'>
           <img
             className={'img-fluid w-100'}
-            src={'/images/' + props.gameInput.cardTheme + '/' + props.cardPictures[number] + '.jpg'}
+            src={process.env.PUBLIC_URL + '/images/' + props.gameInput.cardTheme + '/' + props.cardPictures[number] + '.jpg'}
             alt='Card'
             draggable='false'
           />
@@ -189,7 +189,7 @@ function Results(props) {
           <Modal.Title>{props.message}</Modal.Title>
         </Modal.Header>
         <Modal.Body>
-          <img src={'/images/win.png'} alt='Trophy' height='360' width='640' className={'img-fluid'} />
+          <img src={process.env.PUBLIC_URL + '/images/win.png'} alt='Trophy' height='360' width='640' className={'img-fluid'} />
         </Modal.Body>
         <Modal.Footer>
           <button
